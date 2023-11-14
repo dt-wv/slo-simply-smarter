@@ -1,0 +1,23 @@
+{
+ "burnRateMetricKey": "func:slo.errorBudgetBurnRate.kubernetes___cluster_memory_efficiency",
+ "enabled": true,
+ "errorBudgetBurnRate": {
+  "burnRateVisualizationEnabled": true,
+  "fastBurnThreshold": 3.593
+ },
+ "errorBudgetMetricKey": "func:slo.errorBudget.kubernetes___cluster_memory_efficiency",
+ "evaluationType": "AGGREGATE",
+ "filter": "type(\"KUBERNETES_CLUSTER\")",
+ "metricDenominator": "",
+ "metricExpression": "builtin:kubernetes.node.requests_memory:splitBy(\"dt.entity.kubernetes_cluster\")/builtin:kubernetes.node.memory_allocatable:splitBy(\"dt.entity.kubernetes_cluster\")*(100)",
+ "metricKey": "func:slo.kubernetes___cluster_memory_efficiency",
+ "metricNumerator": "",
+ "metricRate": "",
+ "name": "{{.name}}",
+ "normalizedErrorBudgetMetricKey": "func:slo.normalizedErrorBudget.kubernetes___cluster_memory_efficiency",
+ "numeratorValue": 0,
+ "target": 80,
+ "timeframe": "-1w",
+ "useRateMetric": true,
+ "warning": 90
+}

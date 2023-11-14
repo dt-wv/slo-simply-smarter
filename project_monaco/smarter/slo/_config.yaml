@@ -77,3 +77,10 @@ configs:
     skip: false
   type:
     api: slo
+- id: aaaaaaaa-a003-a017-0011-000000000133
+  config:
+    name: Kubernetes - Cluster Memory efficiency
+    template: Kubernetes-ClusterMemory_Efficiency.json
+    skip: false
+  type:
+    api: slo
