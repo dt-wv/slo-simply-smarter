@@ -7,7 +7,7 @@
  },
  "errorBudgetMetricKey": "func:slo.errorBudget.kubernetes___memory_request_efficiency",
  "evaluationType": "AGGREGATE",
- "filter": "type(\"CLOUD_APPLICATION_NAMESPACE\"),entityId(\"\")",
+ "filter": "type(\"CLOUD_APPLICATION_NAMESPACE\")",
  "metricDenominator": "",
  "metricExpression": "builtin:kubernetes.workload.memory_working_set:splitBy(\"dt.entity.cloud_application_namespace\")/builtin:kubernetes.workload.requests_memory:splitBy(\"dt.entity.cloud_application_namespace\")*(100)",
  "metricKey": "func:slo.kubernetes___memory_request_efficiency",
