@@ -3,11 +3,11 @@
  "enabled": true,
  "errorBudgetBurnRate": {
   "burnRateVisualizationEnabled": true,
-  "fastBurnThreshold": 3.593
+  "fastBurnThreshold": 10
  },
  "errorBudgetMetricKey": "func:slo.errorBudget.kubernetes___cluster_memory_efficiency",
  "evaluationType": "AGGREGATE",
- "filter": "type(\"KUBERNETES_CLUSTER\")",
+ "filter": "type(\"KUBERNETES_CLUSTER\"),entityId(\"\")",
  "metricDenominator": "",
  "metricExpression": "builtin:kubernetes.node.requests_memory:splitBy(\"dt.entity.kubernetes_cluster\")/builtin:kubernetes.node.memory_allocatable:splitBy(\"dt.entity.kubernetes_cluster\")*(100)",
  "metricKey": "func:slo.kubernetes___cluster_memory_efficiency",

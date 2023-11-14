@@ -3,11 +3,11 @@
  "enabled": true,
  "errorBudgetBurnRate": {
   "burnRateVisualizationEnabled": true,
-  "fastBurnThreshold": 1.038
+  "fastBurnThreshold": 10
  },
  "errorBudgetMetricKey": "func:slo.errorBudget.kubernetes___memory_request_efficiency",
  "evaluationType": "AGGREGATE",
- "filter": "type(\"CLOUD_APPLICATION_NAMESPACE\")",
+ "filter": "type(\"CLOUD_APPLICATION_NAMESPACE\"),entityId(\"\")",
  "metricDenominator": "",
  "metricExpression": "builtin:kubernetes.workload.memory_working_set:splitBy(\"dt.entity.cloud_application_namespace\")/builtin:kubernetes.workload.requests_memory:splitBy(\"dt.entity.cloud_application_namespace\")*(100)",
  "metricKey": "func:slo.kubernetes___memory_request_efficiency",
