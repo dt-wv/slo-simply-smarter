@@ -70,7 +70,7 @@ configs:
     skip: false
   type:
     api: slo
-- id: aaaaaaaa-a003-a018-0009-000000000133
+- id: aaaaaaaa-a003-a017-0010-000000000133
   config:
     name: Kubernetes - Memory requests efficiency
     template: Kubernetes-MemoryRequest_Efficiency.json
